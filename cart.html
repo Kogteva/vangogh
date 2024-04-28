@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Ван Гог</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a href="./index.html" class="logo">
+            <img src="./img/logo.png" alt="">
+          </a>
+          <nav class="header__nav">
+            <a href="./about.html" class="header__link">О нас</a>
+            <a href="./feedback.html" class="header__link">Отзывы</a>
+            <a href="./shop.html" class="header__link">Каталог</a>
+            <a href="./cart.html" class="header__link">Корзина</a>
+
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="cart">
+        <div class="container">
+          <div class="cart__body">
+            <h4 class="section-title tac">Корзина</h4>
+            <div class="cart__grid">
+              <div class="cart__item">
+                <img src="./img/scale.jpg" alt="">
+                <div class="cart__item-box">
+                  <span>Портрет</span>
+                  <p><strong>9999</strong> ₽</p>
+                  <button class="delete">удалить</button>
+                </div>
+              </div>
+              <div class="cart__item">
+                <img src="./img/1н.jpg" alt="">
+                <div class="cart__item-box">
+                  <span>Звездное небо</span>
+                  <p><strong>2999</strong> ₽</p>
+                  <button class="delete">удалить</button>
+                </div>
+              </div>
+              <div class="cart__item">
+                <img src="./img/2н.jpg" alt="">
+                <div class="cart__item-box">
+                  <span>Гроза</span>
+                  <p><strong>9999</strong> ₽</p>
+                  <button class="delete">удалить</button>
+                </div>
+              </div>
+              <div class="cart__item">
+                <img src="./img/3н.jpg" alt="">
+                <div class="cart__item-box">
+                  <span>Автопортрет</span>
+                  <p><strong>1999</strong> ₽</p>
+                  <button class="delete">удалить</button>
+                </div>
+              </div>
+              <div class="cart__item">
+                <img src="./img/4н.jpg" alt="">
+                <div class="cart__item-box">
+                  <span>Поле</span>
+                  <p><strong>9999</strong> ₽</p>
+                  <button class="delete">удалить</button>
+                </div>
+              </div>
+            </div>
+            <p class="summ">Итого: <strike class="first-price"></strike> <span class="last-price"></span>₽</p><br>
+            <button class="cart__buy btn orange">Заказать</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <form class="add__form">
+      <input type="text" placeholder="Фио">
+      <input type="number" placeholder="Номер">
+      <input type="mail" placeholder="Почта">
+      <input type="text" placeholder="Адрес">
+      <button class="form__btn">Заказать</button>
+    </form>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <p>Сделала Когтева Надежда</p>
+          <p>ВИАС23</p>
+          <p>2024</p>
+        </div>
+        <img src="./img/kitten.png" alt="">
+      </div>
+    </footer>
+  </div>
+
+</body>
+<script src="./js/main.js"></script>
+<script>
+  const items = document.querySelectorAll('.cart__item')
+  var price = 0
+
+  items.forEach(el => {
+    price += Number(el.querySelector('strong').innerHTML)
+  })
+  document.querySelector('.last-price').innerHTML = price * 0.9
+  document.querySelector('.first-price').innerHTML = price
+
+  items.forEach(el => {
+    el.querySelector('.delete').addEventListener('click', () => {
+      el.style.display = 'none'
+      price -= Number(el.querySelector('strong').innerHTML)
+      document.querySelector('.last-price').innerHTML = price * 0.9
+      document.querySelector('.first-price').innerHTML = price 
+    })
+  })
+
+</script>
+<script src="./js/cart.js"></script>
+
+</html>

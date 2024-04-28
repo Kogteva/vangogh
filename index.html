@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Ван Гог</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="./index.html" class="logo">
+          <img src="./img/logo.png" alt="">
+        </a>
+        <nav class="header__nav">
+          <a href="./about.html" class="header__link">О нас</a>
+          <a href="./feedback.html" class="header__link">Отзывы</a>
+          <a href="./shop.html" class="header__link">Каталог</a>
+          <a href="./cart.html" class="header__link">Корзина</a>
+
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <section class="banner">
+      <div class="container">
+        <div class="banner__body">
+          <h1 class="title">Магазин живописи</h1>
+          <p>Картины в стиле произведений Ван Гога,<br>краски и масла, холсты и многое другое</p>
+          <a class="btn white" href="./shop.html">Каталог</a>
+        </div>
+      </div>
+    </section>
+    <section class="info">
+      <div class="container">
+        <div class="info__body">
+          <h4 class="section-title">Добро пожаловать!</h4>
+          <p class="text">
+            Мы предлагаем не
+            только краски и холсты, но и репродукции картин Ван Гога, которые позволят вам почувствовать его творческий
+            дух и эмоциональную глубину в каждой работе.
+          </p>
+          <p class="text">Мы рады видеть вас в нашем магазине и помочь вам в создании вашего собственного шедевра!</p>
+        </div>
+      </div>
+    </section>
+    <section class="services">
+      <div class="container">
+        <div class="services__body">
+          <h4 class="section-title">У нас вы найдёте</h4>
+
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./img/mUa4gmvsERo.jpg" alt="Холсты">
+                <div class="slide-box">
+                  <p>Холсты, на которых можно создавать свои собственные произведения искусства</p>
+                  <a class="btn black" href="./shop.html">Каталог</a>
+
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/tubes.jpg" alt="Краски">
+                <div class="slide-box">
+                  <p>Краски, которые помогут вам в создании уникальных картин</p>
+                  <a class="btn black" href="./shop.html">Каталог</a>
+
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/banner.jpg" alt="Картины">
+                <div class="slide-box">
+                  <p>Картины, которые позволят вам насладиться творчеством в уютной обстановке вашего дома</p>
+                  <a class="btn black" href="./shop.html">Каталог</a>
+                </div>
+
+              </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <p>Сделала Когтева Надежда</p>
+        <p>ВИАС23</p>
+        <p>2024</p>
+      </div>
+      <img src="./img/kitten.png" alt="">
+    </div>
+  </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    paralax: true,
+    speed: 1000,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+  });
+</script>
+<script src="./js/main.js"></script>
+
+</html>
